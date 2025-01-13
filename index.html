@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botón y Texto</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #ffccf9, #d9c6f7);
+            color: #555;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            background-color: #ffffff;
+            width: 90%;
+            max-width: 400px;
+        }
+        button {
+            background: linear-gradient(135deg, #ff9cda, #c79cf9);
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background: linear-gradient(135deg, #ff83cc, #b58cf0);
+        }
+        #mensaje {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button id="boton" onclick="mostrarMensaje()">Haz clic aquí</button>
+        <div id="mensaje">¡Hola! Este es el texto mostrado.</div>
+    </div>
+
+    <script>
+        function mostrarMensaje() {
+            const mensaje = document.getElementById('mensaje');
+            const boton = document.getElementById('boton');
+            boton.style.display = 'none';
+            mensaje.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
